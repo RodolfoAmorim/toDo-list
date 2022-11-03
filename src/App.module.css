@@ -40,4 +40,16 @@
 	line-height: 1.4;
 	font-weight: 700;
 	color: var(--gray-100);
+	cursor: pointer;
+}
+
+.newTask button:disabled {
+	filter: grayscale(.3);
+	cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
 }
