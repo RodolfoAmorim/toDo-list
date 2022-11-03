@@ -32,10 +32,13 @@ export function App() {
 		setNewItemList({ id: newItemId, title: newItemTitle, isChecked: false });
 	}
 
-	function handleCreateNewTask(event: FormEvent) {
+	function handleCreateNewTask(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 
 		setItemList([newItemList, ...itemList]);
+
+		const resetForm = event.target as HTMLFormElement;
+		resetForm.reset()
 	}
 
 	function deleteTask(taskToDelete: string) {
